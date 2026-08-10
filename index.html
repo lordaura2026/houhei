@@ -2106,7 +2106,31 @@
             -webkit-text-stroke: 0;
         }
         .hero-tagline { color: #2b2b2b; }
-        .hero-tagline .sub { color: #6f6658; }
+
+        /* --- 1937 German blackletter (self-hosted, SIL OFL) --- */
+        @font-face {
+            font-family: 'Germania One';
+            src: url('germania-one.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        .hero-tagline .main {
+            color: #111111;
+            font-family: 'Germania One', 'UnifrakturMaguntia', 'Noto Serif SC', serif;
+            font-size: clamp(1.38rem, 2.64vw, 1.92rem);
+            font-weight: 400;
+            letter-spacing: 0.06em;
+            padding-left: 0.06em;
+        }
+        .hero-tagline .sub {
+            color: #4d4438;
+            font-family: 'Germania One', 'UnifrakturMaguntia', 'Noto Serif SC', serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.08em;
+            padding-left: 0.08em;
+        }
         .scroll-indicator { color: rgba(90, 80, 66, 0.55); }
 
         /* --- Section text --- */
@@ -2781,8 +2805,8 @@
             <span class="char hei">黑</span>
         </h1>
         <div class="hero-tagline">
-            <div class="main">以厚为盾 · 以黑为矛</div>
-            <div class="sub"><span class="noble">磐石</span> · 重新定义厚黑</div>
+            <div class="main">HouHei.com</div>
+            <div class="sub">WenMou.com</div>
         </div>
         <div class="scroll-indicator" aria-label="下滑浏览">
             <span class="scroll-mouse"></span>
