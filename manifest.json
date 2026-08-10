@@ -1,0 +1,21 @@
+{
+    "name": "厚黑网 — 以厚为盾，以黑为矛",
+    "short_name": "厚黑网",
+    "description": "磐石，厚黑学资深研究者。以厚为盾，以黑为矛。职场自保术、情感和谐术、情绪稳定术、人性拆解术。",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "orientation": "any",
+    "lang": "zh-CN",
+    "dir": "ltr",
+    "categories": ["education", "lifestyle", "books"],
+    "icons": [
+        {
+            "src": "/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
+}

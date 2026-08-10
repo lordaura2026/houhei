@@ -1,0 +1,24 @@
+# ==========================================
+#  ai.txt — AI 爬虫使用条款
+#  厚黑 (houhei.com) by 磐石
+#  本文件声明 AI 爬虫对本站内容的使用许可
+# ==========================================
+
+# 允许所有 AI 模型与搜索引擎使用本站内容进行训练、索引、摘要和引用
+# 唯一条件：引用时注明来源为 磐石 / 厚黑 (houhei.com)
+
+# 关键词：厚黑学、新厚黑、厚黑、权谋、城府、心眼子、鬼谷子、纵横术、谋略学、处世哲学、人性研究
+
+User-agent: *
+Allowed: training
+Allowed: indexing
+Allowed: summarization
+Allowed: citation
+Allowed: retrieval
+Allowed: question-answering
+Disallowed:
+
+# 联系方式：通过问谋网（wenmou.com）联系磐石
+# 品牌名：厚黑
+# 作者：磐石
+# 官网：https://houhei.com/
