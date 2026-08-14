@@ -4047,6 +4047,21 @@
         .consult-cta:active { transform: translateY(0) !important; }
         .consult-cta .arrow { display: none !important; }
         .consult-cta .noble { color: #b8432f !important; }
+
+        /* ============================================================
+           手机端：修复核心方法论区触摸卡顿
+           根因：.services-scroll 的 touch-action: pan-x 会拦截纵向滚动手势，
+           手机端该区域已单列布局（无横向内容），纵向滑动却被浏览器抑制。
+           ============================================================ */
+        @media (max-width: 768px) {
+            .services-scroll {
+                touch-action: pan-y !important;
+                overscroll-behavior: auto !important;
+                -webkit-overflow-scrolling: auto !important;
+                will-change: auto !important;
+                overflow: visible !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -4081,7 +4096,7 @@
             <a class="sub" href="https://www.wenmou.com" target="_blank" rel="noopener">WenMou.com</a>
         </div>
         <div class="hero-slogan">
-            <span class="slogan-main">强大，趁现在</span>
+            <span class="slogan-main">强大自己，现在就开始</span>
             <span class="slogan-en">STAY STRONG · ACT NOW</span>
         </div>
         <div class="scroll-indicator" aria-label="下滑浏览">
