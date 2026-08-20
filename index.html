@@ -1676,7 +1676,7 @@
         /* ===== Scroll Animations ===== */
         .fade-in {
             opacity: 0;
-            transition: opacity 0.6s ease;
+            transition: opacity 0.35s ease;
         }
 
         .fade-in.visible {
@@ -4664,7 +4664,7 @@
                     entry.target.classList.add('visible');
                 }
             });
-        }, { threshold: 0, rootMargin: '0px 0px -60px 0px' });
+        }, { threshold: 0, rootMargin: '0px 0px 400px 0px' });
 
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
