@@ -1184,7 +1184,7 @@
             transition: border-color 0.4s, background 0.4s, transform 0.4s;
             display: flex;
             flex-direction: column;
-            will-change: transform;
+            will-change: auto;
             backface-visibility: hidden;
             -webkit-backface-visibility: hidden;
         }
@@ -1676,13 +1676,11 @@
         /* ===== Scroll Animations ===== */
         .fade-in {
             opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
+            transition: opacity 0.6s ease;
         }
 
         .fade-in.visible {
             opacity: 1;
-            transform: translateY(0);
         }
 
         /* ===== Essay: 新厚黑学 · 强者生存哲学 ===== */
@@ -2863,12 +2861,12 @@
                 opacity: 1;
                 pointer-events: auto;
                 scroll-snap-align: none;
-                transition: border-color 0.3s, background 0.3s, transform 0.3s;
+                transition: border-color 0.3s, background 0.3s;
                 padding: 1.2rem 1rem 1.1rem;
                 cursor: pointer;
             }
 
-            .service-card:active { transform: scale(0.97); }
+            .service-card:active { transform: none; }
             .service-card .card-number { font-size: 1.8rem; margin-bottom: 0.5rem; }
             .service-card h3 { font-size: 0.98rem; margin-bottom: 0.5rem; }
             .service-card h3::before { width: 1.3rem; margin-bottom: 0.5rem; }
@@ -4061,6 +4059,21 @@
                 will-change: auto !important;
                 overflow: visible !important;
             }
+        }
+
+        /* ============================================================
+           性能优化：减少加载与滚动开销
+           ============================================================ */
+        /* 1. 禁用 nav 常驻 backdrop-filter：白色主题未重置它，
+              滚动时页面内容在 nav 下方移动需持续模糊重绘（移动端卡顿源） */
+        nav.scrolled {
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+        }
+        /* 2. 服务区（核心方法论）懒渲染：视口外不绘制子树 */
+        .services-section {
+            content-visibility: auto;
+            contain-intrinsic-size: auto 900px;
         }
     </style>
 </head>
